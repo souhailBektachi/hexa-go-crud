@@ -1,0 +1,34 @@
+
+# Version control
+.git
+.gitignore
+
+# IDE specific
+.idea
+.vscode
+
+# Temp files
+tmp/
+*.tmp
+
+# Testing
+*_test.go
+*.test
+
+# Build artifacts
+bin/
+
+# Docker files
+Dockerfile
+docker-compose.yml
+*.dockerfile
+
+# Documentation
+README.md
+docs/
+
+# OS specific
+.DS_Store
+
+# Environment variables
+.env
