@@ -9,8 +9,9 @@ services:
     environment:
       - DB_HOST=db
       - DB_PORT=5432
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+      - DB_NAME=something
     depends_on:
       - db
   db:

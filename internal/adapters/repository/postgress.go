@@ -18,11 +18,13 @@ type PostgressRepository struct {
 
 func NewPostgressRepository() *PostgressRepository {
 	host := os.Getenv("DB_HOST")
-	user := os.Getenv("POSTGRES_USER")
+	port := os.Getenv("DB_PORT")
+	user := os.Getenv("DB_USER")
 	password := os.Getenv("DB_PASSWORD")
 	dbname := os.Getenv("DB_NAME")
-	port := os.Getenv("DB_PORT")
-	connStr := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s sslmode=disable", host, user, password, dbname, port)
+
+	connStr := fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=disable",
+		host, port, user, password, dbname)
 	db, err := sql.Open("postgres", connStr)
 	if err != nil {
 		log.Fatalf("Could not connect to the database: %v", err)

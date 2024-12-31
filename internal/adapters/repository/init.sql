@@ -8,8 +8,9 @@ BEGIN
     END IF;
 END
 $$;
+\c something
 
-CREATE TABLE IF NOT EXISTS something (
+CREATE TABLE IF NOT EXISTS somthing (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL
 );
